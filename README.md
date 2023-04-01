@@ -1,5 +1,5 @@
 # Coin-Market-API-Example
-![alt text](https://github.com/haa-gg/Coin-Market-API-Example/blob/main/screenshot.jpg?raw=true)
+![alt text](https://github.com/haa-gg/Coin-Market-API-Example/blob/master/screenshot.jpg?raw=true)
 
 Note: The API this was built on was deprecated so you'd need to find a fresh crypto API for this to run
 
