@@ -20,76 +20,73 @@
   </div>
 
   <?php
-//include 'login.php';
 include 'apicall.php';
-//include 'dbupdate.php';
-
 ?>
 
 
 
  
 
-   <?php for( $i = 0 ; $i < count($geocodingAPI); $i++) { ?>
+   <?php for( $i = 0 ; $i < count($cryptoData); $i++) { ?>
   
   <div class="grid-container">
    
     <table border="1">
         <tr>
             <td>ID:</td>
-            <td id="id"><?php echo $geocodingAPI[$i]['id']; ?></td>
+            <td id="id"><?php echo $cryptoData[$i]['id']; ?></td>
         </tr>
         <tr>
             <td>Name:</td>
-            <td id="name"><?php echo $geocodingAPI[$i]['name']; ?></td>
+            <td id="name"><?php echo $cryptoData[$i]['name']; ?></td>
         </tr>
         <tr>
             <td>Symbol:</td>
-            <td id="symbol"><?php echo $geocodingAPI[$i]['symbol']; ?></td>
+            <td id="symbol"><?php echo $cryptoData[$i]['symbol']; ?></td>
         </tr>
          <tr>
             <td>Rank:</td>
-            <td id="symbol"><?php echo $geocodingAPI[$i]['rank']; ?></td>
+            <td id="symbol"><?php echo $cryptoData[$i]['rank']; ?></td>
         </tr>
          <tr>
             <td>Price (USD):</td>
-            <td id="symbol"><?php echo $geocodingAPI[$i]['price_usd']; ?></td>
+            <td id="symbol"><?php echo $cryptoData[$i]['price_usd']; ?></td>
         </tr>
          <tr>
             <td>Price (BTC):</td>
-            <td id="symbol"><?php echo $geocodingAPI[$i]['price_btc']; ?></td>
+            <td id="symbol"><?php echo $cryptoData[$i]['price_btc']; ?></td>
         </tr>
          <tr>
             <td>24 Hour Volume USD:</td>
-            <td id="symbol"><?php echo $geocodingAPI[$i]['24h_volume_usd']; ?></td>
+            <td id="symbol"><?php echo $cryptoData[$i]['24h_volume_usd']; ?></td>
         </tr>
          <tr>
             <td>Market Cap USD:</td>
-            <td id="symbol"><?php echo $geocodingAPI[$i]['market_cap_usd']; ?></td>
+            <td id="symbol"><?php echo $cryptoData[$i]['market_cap_usd']; ?></td>
         </tr>
          <tr>
             <td>Available Supply:</td>
-            <td id="symbol"><?php echo $geocodingAPI[$i]['available_supply']; ?></td>
+            <td id="symbol"><?php echo $cryptoData[$i]['available_supply']; ?></td>
         </tr>
          <tr>
             <td>Total Supply:</td>
-            <td id="symbol"><?php echo $geocodingAPI[$i]['total_supply']; ?></td>
+            <td id="symbol"><?php echo $cryptoData[$i]['total_supply']; ?></td>
         </tr>
          <tr>
             <td>Percentage Change 1h:</td>
-            <td id="symbol"><?php echo $geocodingAPI[$i]['percent_change_1h']; ?></td>
+            <td id="symbol"><?php echo $cryptoData[$i]['percent_change_1h']; ?></td>
         </tr>
          <tr>
             <td>Percentage Change 24h:</td>
-            <td id="symbol"><?php echo $geocodingAPI[$i]['percent_change_24h']; ?></td>
+            <td id="symbol"><?php echo $cryptoData[$i]['percent_change_24h']; ?></td>
         </tr>
          <tr>
             <td>Percentage Change 7d:</td>
-            <td id="symbol"><?php echo $geocodingAPI[$i]['percent_change_7d']; ?></td>
+            <td id="symbol"><?php echo $cryptoData[$i]['percent_change_7d']; ?></td>
         </tr>
          <tr>
             <td>Last Updated:</td>
-            <td id="symbol"><?php echo $geocodingAPI[$i]['last_updated']; ?></td>
+            <td id="symbol"><?php echo $cryptoData[$i]['last_updated']; ?></td>
         </tr>
         
     </table>

@@ -10,7 +10,7 @@ include 'apicall.php';
 //The $name stuff is to generate the new table name in our database
 $name = date ('d-m-Y');
 $name = "cd-".$name;
-//Defining the properties of our tablew
+//Defining the properties of our table
 $sql = "CREATE TABLE `".$name."` (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 id_name VARCHAR(30) NOT NULL,
@@ -35,23 +35,23 @@ if ($conn->query($sql) === TRUE) {
 	echo "Table ".$name." created successfully, break out the champagne!";
 
 	//This loop checks how many entries are in the API array then tells the loop to run that many times so it inserts every entry from the array into our fresh table
-for( $i = 0 ; $i < count($geocodingAPI); $i++) {
+for( $i = 0 ; $i < count($cryptoData); $i++) {
 
 	$sql = "INSERT INTO `".$name."` (id_name, name, symbol, rank, price_usd, price_btc, vol_usd, mkt_cap, avaliable_supply, total_supply, pcnt_1h, pcnt_24h, pcnt_7d, update_time)
-	VALUES ('".$geocodingAPI[$i]['id']."',
-	'".$geocodingAPI[$i]['name']."',
-	'".$geocodingAPI[$i]['symbol']."',
-	'".$geocodingAPI[$i]['rank']."',
-	'".$geocodingAPI[$i]['price_usd']."',
-	'".$geocodingAPI[$i]['price_btc']."',
-	'".$geocodingAPI[$i]['24h_volume_usd']."',
-	'".$geocodingAPI[$i]['market_cap_usd']."',
-	'".$geocodingAPI[$i]['available_supply']."',
-	'".$geocodingAPI[$i]['total_supply']."',
-	'".$geocodingAPI[$i]['percent_change_1h']."',
-	'".$geocodingAPI[$i]['percent_change_24h']."',
-	'".$geocodingAPI[$i]['percent_change_7d']."',
-	'".$geocodingAPI[$i]['last_updated']."' )";
+	VALUES ('".$cryptoData[$i]['id']."',
+	'".$cryptoData[$i]['name']."',
+	'".$cryptoData[$i]['symbol']."',
+	'".$cryptoData[$i]['rank']."',
+	'".$cryptoData[$i]['price_usd']."',
+	'".$cryptoData[$i]['price_btc']."',
+	'".$cryptoData[$i]['24h_volume_usd']."',
+	'".$cryptoData[$i]['market_cap_usd']."',
+	'".$cryptoData[$i]['available_supply']."',
+	'".$cryptoData[$i]['total_supply']."',
+	'".$cryptoData[$i]['percent_change_1h']."',
+	'".$cryptoData[$i]['percent_change_24h']."',
+	'".$cryptoData[$i]['percent_change_7d']."',
+	'".$cryptoData[$i]['last_updated']."' )";
 
 
 if ($conn->query($sql) === TRUE) {
@@ -61,13 +61,9 @@ if ($conn->query($sql) === TRUE) {
 }
 }
 
-
 } else {
 	echo "Error creating table: " . $conn->error;
 }
 
-
-
 $conn->close();
-
 ?>
